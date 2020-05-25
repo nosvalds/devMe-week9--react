@@ -1,13 +1,9 @@
 import React from 'react';
 
-const Paragraph = ({ message }) => {
+const Paragraph = ({ children }) => {
     return (
-        <p>{ message }</p>
+        <p>{ children }</p>
     )
 }
-
-Paragraph.defaultProps = {
-    message: "Hell, world"
-};
 
 export default Paragraph;

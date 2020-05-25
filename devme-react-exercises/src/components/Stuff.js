@@ -9,7 +9,7 @@ const Stuff = ({ square }) => {
   return (
     <React.Fragment>
         <Header>Hello, world</Header>
-        <Paragraph message="lorem" />
+        <Paragraph>Lorem Ipsum dolor etc. etc.</Paragraph>
         { square ? <Square /> : null}
         <People names={names} />
     </React.Fragment>
