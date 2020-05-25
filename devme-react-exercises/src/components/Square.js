@@ -1,15 +1,18 @@
 import React from 'react';
 
-const Square = () => {
+const Square = ({ color }) => {
     return (
         <div style={{
             width: "200px",
             height: "200px",
-            backgroundColor: "salmon"
+            backgroundColor: color
              }}>
         </div>
     )
 }
 
+Square.defaultProps = {
+    color: "salmon"
+}
 
 export default Square;

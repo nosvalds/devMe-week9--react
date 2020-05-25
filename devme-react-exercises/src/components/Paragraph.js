@@ -7,7 +7,7 @@ const Paragraph = ({ message }) => {
 }
 
 Paragraph.defaultProps = {
-    message: "Hello World"
+    message: "Hell, world"
 };
 
 export default Paragraph;
