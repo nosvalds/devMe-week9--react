@@ -8,7 +8,7 @@ const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
   return (
     <React.Fragment>
-        <Header text="Hello, world" />
+        <Header>Hello, world</Header>
         <Paragraph message="lorem" />
         { square ? <Square /> : null}
         <People names={names} />
