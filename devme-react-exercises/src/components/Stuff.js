@@ -5,12 +5,13 @@ import Square from './Square';
 import People from './People';
 
 const Stuff = () => {
+    let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
   return (
     <React.Fragment>
         <Header text="Hello, world" />
         <Paragraph message="lorem" />
         <Square />
-        <People />
+        <People names={names} />
     </React.Fragment>
   );
 }

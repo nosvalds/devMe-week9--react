@@ -1,9 +1,7 @@
 import React from 'react';
 
-const People = () => {
-    let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
-
-    return (
+const People = ({ names }) => {
+    return !names ? (<p>Nothing to see here</p>) : (
         <ul>
             {names.map((name, index) => (
                 <li className="page-item" key={ index }>
