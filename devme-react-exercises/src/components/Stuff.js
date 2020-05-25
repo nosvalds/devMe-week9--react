@@ -8,7 +8,7 @@ const Stuff = () => {
   return (
     <React.Fragment>
         <Header text="Hello, world" />
-        <Paragraph />
+        <Paragraph message="lorem" />
         <Square />
         <People />
     </React.Fragment>
