@@ -11,6 +11,7 @@ import StepCounter from './state/StepCounter';
 import CatchMeIfYouCan from './state/CatchMeIfYouCan';
 import RollCall from './state/RollCall';
 import Colours from './tricksy_state/Colours';
+import Die from './tricksy_state/Die';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -29,7 +30,7 @@ const Stuff = ({ square }) => {
       "#009EAD",
       "#395967",
     ]; 
-    
+
   return (
     <React.Fragment>
         <Header>Hello, world</Header>
@@ -44,6 +45,7 @@ const Stuff = ({ square }) => {
         <CatchMeIfYouCan jump={ 5 } />
         <RollCall names={ names } />
         <Colours colours={ colours } />
+        <Die sides={ 6 }/>
     </React.Fragment>
   );
 }
