@@ -10,6 +10,7 @@ import Counter from './state/Counter';
 import StepCounter from './state/StepCounter';
 import CatchMeIfYouCan from './state/CatchMeIfYouCan';
 import RollCall from './state/RollCall';
+import Colours from './tricksy_state/Colours';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -20,6 +21,15 @@ const Stuff = ({ square }) => {
         { name: "Milk", price: 250.65 },
         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
     ]; 
+
+    let colours = [
+      "#C14412",
+      "#EBB31A",
+      "#8F5318",
+      "#009EAD",
+      "#395967",
+    ]; 
+    
   return (
     <React.Fragment>
         <Header>Hello, world</Header>
@@ -33,6 +43,7 @@ const Stuff = ({ square }) => {
         <StepCounter max={ 100 } step={ 5 } />
         <CatchMeIfYouCan jump={ 5 } />
         <RollCall names={ names } />
+        <Colours colours={ colours } />
     </React.Fragment>
   );
 }

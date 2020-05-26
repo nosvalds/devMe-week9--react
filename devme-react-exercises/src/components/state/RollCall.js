@@ -11,7 +11,7 @@ class RollCall extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick() {
         const { names } = this.props; // get jump size from props
