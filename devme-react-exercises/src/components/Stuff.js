@@ -19,7 +19,7 @@ const Stuff = ({ square }) => {
     <React.Fragment>
         <Header>Hello, world</Header>
         <Paragraph>Lorem Ipsum dolor etc. etc.</Paragraph>
-        { square ? <Square /> : null}
+        { square ? <Square color="hotpink" /> : null}
         <People names={ names } />
         <Basket items={ items } />
         <Clicked />
