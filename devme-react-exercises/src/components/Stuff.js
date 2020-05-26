@@ -9,6 +9,7 @@ import ToggleText from './state/ToggleText';
 import Counter from './state/Counter';
 import StepCounter from './state/StepCounter';
 import CatchMeIfYouCan from './state/CatchMeIfYouCan';
+import RollCall from './state/RollCall';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -31,6 +32,7 @@ const Stuff = ({ square }) => {
         <Counter initial={ 50 } max={ 100 }/>
         <StepCounter max={ 100 } step={ 5 } />
         <CatchMeIfYouCan jump={ 5 } />
+        <RollCall names={ names } />
     </React.Fragment>
   );
 }
