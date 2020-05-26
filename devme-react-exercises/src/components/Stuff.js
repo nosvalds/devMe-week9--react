@@ -4,6 +4,7 @@ import Paragraph from './Paragraph';
 import Square from './Square';
 import People from './People';
 import Basket from './Basket';
+import Clicked from './state/Clicked';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -21,6 +22,7 @@ const Stuff = ({ square }) => {
         { square ? <Square /> : null}
         <People names={ names } />
         <Basket items={ items } />
+        <Clicked />
     </React.Fragment>
   );
 }
