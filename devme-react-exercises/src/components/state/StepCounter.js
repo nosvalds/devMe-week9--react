@@ -20,7 +20,7 @@ class StepCounter extends Component {
 
         if (currentCount + num > max) { // adding num to currentCount > max, set count to max
             this.setState({ count: max });
-        } else if (currentCount + num < 0) { // subtracting num to currentCount < 0, set count to max
+        } else if (currentCount + num < 0) { // adding num to currentCount < 0, set count to 0
             this.setState({ count: 0 });
         } else {
             this.setState({ count: currentCount + num }); 

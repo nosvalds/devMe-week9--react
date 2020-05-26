@@ -19,12 +19,12 @@ class Counter extends Component {
 
         let currentCount = this.state.count;
 
-        if (currentCount < max && currentCount > 0) { // if less than max or > 0 can add or subtract
+        if (currentCount + num > max) { // adding num to currentCount > max, set count to max
+            this.setState({ count: max });
+        } else if (currentCount + num < 0) { // adding num to currentCount < 0, set count to initial
+            this.setState({ count: 0 });
+        } else {
             this.setState({ count: currentCount + num }); 
-        } else if (currentCount === max && num < 0) { // if = max and subtracting update the state
-            this.setState({ count: currentCount + num });
-        } else if (currentCount === 0 && num > 0) {
-            this.setState({ count: currentCount + num });
         }
     }
 
@@ -32,8 +32,8 @@ class Counter extends Component {
         return (<>
                 <p>{ this.state.count }</p>
                 <div>
-                    <button onClick={() => this.handleClick(-1)}>-</button>
-                    <button onClick={() => this.handleClick(1)}>+</button>
+                    <button onClick={() => this.handleClick(-1)}>-1</button>
+                    <button onClick={() => this.handleClick(1)}>+1</button>
                 </div>
                 </>)
     }
