@@ -7,6 +7,7 @@ import Basket from './Basket';
 import Clicked from './state/Clicked';
 import ToggleText from './state/ToggleText';
 import Counter from './state/Counter';
+import StepCounter from './state/StepCounter';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -27,6 +28,7 @@ const Stuff = ({ square }) => {
         <Clicked />
         <ToggleText initial="Hello" alternate="World" />
         <Counter initial={ 50 } max={ 100 }/>
+        <StepCounter max={ 100 } step={ 5 } />
     </React.Fragment>
   );
 }
