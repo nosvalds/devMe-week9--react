@@ -6,6 +6,7 @@ import People from './People';
 import Basket from './Basket';
 import Clicked from './state/Clicked';
 import ToggleText from './state/ToggleText';
+import Counter from './state/Counter';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -25,6 +26,7 @@ const Stuff = ({ square }) => {
         <Basket items={ items } />
         <Clicked />
         <ToggleText initial="Hello" alternate="World" />
+        <Counter initial={ 50 } max={ 100 }/>
     </React.Fragment>
   );
 }
