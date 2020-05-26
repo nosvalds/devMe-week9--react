@@ -11,7 +11,7 @@ class Square extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick() {
         this.setState({ clicked: !this.state.clicked }); // swap boolean each time it's clicked so we go back and forth between the colors

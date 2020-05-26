@@ -12,16 +12,17 @@ class Clicked extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick() {
         this.setState({ clicked: true }); 
     }
+
     render() {
-
-        return (<p onClick={ this.handleClick }>{ this.state.clicked ? "Clicked" : "Not clicked" }</p>)
+        return (<p onClick={ this.handleClick }>
+                { this.state.clicked ? "Clicked" : "Not clicked" }
+                </p>)
     }
-
 }
 
 export default Clicked;

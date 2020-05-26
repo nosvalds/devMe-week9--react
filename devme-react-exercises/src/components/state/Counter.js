@@ -12,7 +12,7 @@ class Counter extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick(num) {
         const { max } = this.props;

@@ -11,7 +11,7 @@ class CatchMeIfYouCan extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick() {
         const { jump } = this.props; // get jump size from props

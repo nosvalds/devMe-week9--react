@@ -11,7 +11,7 @@ class StepCounter extends Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        }
+    }
 
     handleClick(num) {
         const { max } = this.props;
@@ -29,6 +29,7 @@ class StepCounter extends Component {
 
     render() {
         const { step } = this.props;
+        
         return (<>
                 <p>{ this.state.count }</p>
                 <div>
