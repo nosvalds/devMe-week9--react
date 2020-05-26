@@ -5,6 +5,7 @@ import Square from './Square';
 import People from './People';
 import Basket from './Basket';
 import Clicked from './state/Clicked';
+import ToggleText from './state/ToggleText';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -23,6 +24,7 @@ const Stuff = ({ square }) => {
         <People names={ names } />
         <Basket items={ items } />
         <Clicked />
+        <ToggleText initial="Hello" alternate="World" />
     </React.Fragment>
   );
 }
