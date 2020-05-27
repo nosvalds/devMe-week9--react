@@ -13,6 +13,7 @@ import RollCall from './state/RollCall';
 import Colours from './tricksy_state/Colours';
 import Die from './tricksy_state/Die';
 import LameGame from './tricksy_state/LameGame';
+import Length from './forms/Length';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -57,7 +58,7 @@ const Stuff = ({ square }) => {
         <Basket 
           items={ items } 
         />
-
+        <h2>State Exercises</h2>
         <Clicked />
 
         <ToggleText 
@@ -82,7 +83,7 @@ const Stuff = ({ square }) => {
         <RollCall 
           names={ names } 
         />
-
+        <h2>State Tricksy Exercises</h2>
         <Colours 
           colours={ colours }
         />
@@ -94,6 +95,12 @@ const Stuff = ({ square }) => {
         <LameGame 
           aim={ x }
         />
+
+        <h2>Form Exercises</h2>
+
+        <h3>01 Length</h3>
+        <Length />
+
         
     </React.Fragment>
   );
