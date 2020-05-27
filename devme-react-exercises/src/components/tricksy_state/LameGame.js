@@ -54,17 +54,19 @@ class LameGame extends Component {
 
         return (
             <>
-            <h1>Lame Game</h1>
-            <LameGameHeader 
-                gameStateIndex={ this.state.gameStateIndex } 
-                aim={ aim } 
-                diff={ this.difference } 
-            />
-            <button 
-                onClick={this.handleClick}
-            >
-                { buttonCaption }
-            </button>
+                <h1>
+                    Lame Game
+                </h1>
+                <LameGameHeader 
+                    gameStateIndex={ this.state.gameStateIndex } 
+                    aim={ aim } 
+                    diff={ this.difference } 
+                />
+                <button 
+                    onClick={this.handleClick}
+                >
+                    { buttonCaption }
+                </button>
             </>
         )
     }

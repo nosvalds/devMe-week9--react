@@ -4,7 +4,8 @@ const FadeIn = ({ time, children }) => (
     <div style={{
         animationDuration: time,
         animationName: "fadeIn"
-    }}> 
+        }}
+    > 
         { children }
     </div>
 )

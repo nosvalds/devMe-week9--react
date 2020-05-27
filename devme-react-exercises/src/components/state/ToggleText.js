@@ -21,14 +21,14 @@ class ToggleText extends Component {
 
         return (
             <>
-            <p>
-                { this.state.clicked ? alternate : initial }
-            </p>
-            <button
-                onClick={ this.handleClick }
-            >
-                Toggle
-            </button>
+                <p>
+                    { this.state.clicked ? alternate : initial }
+                </p>
+                <button
+                    onClick={ this.handleClick }
+                >
+                    Toggle
+                </button>
             </>
         );
     }

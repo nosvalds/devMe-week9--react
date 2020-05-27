@@ -31,21 +31,21 @@ class StepCounter extends Component {
         
         return (
             <>
-            <p>
-                { this.state.count }
-            </p>
-            <div>
-                <button 
-                    onClick={() => this.handleClick(-step)}
-                >
-                    -{ step }
-                </button>
-                <button
-                    onClick={() => this.handleClick(step)}
-                >
-                    +{ step }
-                </button>
-            </div>
+                <p>
+                    { this.state.count }
+                </p>
+                <div>
+                    <button 
+                        onClick={() => this.handleClick(-step)}
+                    >
+                        -{ step }
+                    </button>
+                    <button
+                        onClick={() => this.handleClick(step)}
+                    >
+                        +{ step }
+                    </button>
+                </div>
             </>
         );
     }
