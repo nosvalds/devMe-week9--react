@@ -19,15 +19,18 @@ class Square extends Component {
         const { color } = this.props; // destructure color from props
 
         return (
-            <div 
-                onClick={ this.handleClick } 
-                style={{
-                    width: "200px",
-                    height: "200px",
-                    backgroundColor: this.state.clicked ? color : "green" // if state is false, green. If clicked is true set to color prop.
-                }}
-            >
-            </div>
+            <>
+                <h3>Click me to turn me { color }</h3>
+                <div 
+                    onClick={ this.handleClick } 
+                    style={{
+                        width: "200px",
+                        height: "200px",
+                        backgroundColor: this.state.clicked ? color : "green" // if state is false, green. If clicked is true set to color prop.
+                    }}
+                >
+                </div>
+            </>
         )
     }
 }

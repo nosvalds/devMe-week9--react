@@ -11,6 +11,7 @@ import LameGame from './components/tricksy_state/LameGame';
 import Forms from './components/forms/Forms';
 import Footer from './components/Footer';
 import FourOhFour from './components/FourOhFour';
+import Square from './components/Square';
 
 const App = () => (
     <Router>
@@ -40,6 +41,9 @@ const App = () => (
                         } 
                 />
             </Route>
+            <Route path="/squares/:colour" render={ ({ match }) => (
+                <Square color={ match.params.colour } />
+            )}/>
             <Route component={FourOhFour}/>
         </Switch>
         <Footer/>
