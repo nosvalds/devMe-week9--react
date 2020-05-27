@@ -30,13 +30,25 @@ class StepCounter extends Component {
     render() {
         const { step } = this.props;
         
-        return (<>
-                <p>{ this.state.count }</p>
-                <div>
-                    <button onClick={() => this.handleClick(-step)}>-{ step }</button>
-                    <button onClick={() => this.handleClick(step)}>+{ step }</button>
-                </div>
-                </>)
+        return (
+            <>
+            <p>
+                { this.state.count }
+            </p>
+            <div>
+                <button 
+                    onClick={() => this.handleClick(-step)}
+                >
+                    -{ step }
+                </button>
+                <button
+                    onClick={() => this.handleClick(step)}
+                >
+                    +{ step }
+                </button>
+            </div>
+            </>
+        );
     }
 }
 

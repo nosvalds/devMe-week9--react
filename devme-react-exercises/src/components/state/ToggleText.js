@@ -21,10 +21,18 @@ class ToggleText extends Component {
     render() {
         const { initial, alternate } = this.props; // destructure color from props
 
-        return (<>
-                <p>{ this.state.clicked ? alternate : initial }</p>
-                <button onClick={ this.handleClick }>Toggle</button>
-                </>);
+        return (
+            <>
+            <p>
+                { this.state.clicked ? alternate : initial }
+            </p>
+            <button
+                onClick={ this.handleClick }
+            >
+                Toggle
+            </button>
+            </>
+        );
     }
 }
 

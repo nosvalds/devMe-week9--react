@@ -22,14 +22,19 @@ class Die extends Component {
 
     render() {
         return (
-            <div onClick={ this.handleClick } style={{
-                width: "50px",
-                height: "50px",
-                backgroundColor: "cornflowerblue",
-                borderRadius: 15,
-                textAlign: "center"
-                }}>
-            <h1>{ this.state.roll }</h1>
+            <div 
+                onClick={ this.handleClick }
+                style={{
+                    width: "50px",
+                    height: "50px",
+                    backgroundColor: "cornflowerblue",
+                    borderRadius: 15,
+                    textAlign: "center"
+                }}
+            >
+                <h1>
+                    { this.state.roll }
+                </h1>
             </div>
         )
     }

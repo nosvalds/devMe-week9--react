@@ -29,13 +29,25 @@ class Counter extends Component {
     }
 
     render() {
-        return (<>
-                <p>{ this.state.count }</p>
+        return (
+            <>
+                <p>
+                    { this.state.count }
+                </p>
                 <div>
-                    <button onClick={() => this.handleClick(-1)}>-1</button>
-                    <button onClick={() => this.handleClick(1)}>+1</button>
+                    <button 
+                        onClick={() => this.handleClick(-1)}
+                    >
+                        -1
+                    </button>
+                    <button 
+                        onClick={() => this.handleClick(1)}
+                    >
+                        +1
+                    </button>
                 </div>
-                </>)
+            </>
+        );
     }
 }
 

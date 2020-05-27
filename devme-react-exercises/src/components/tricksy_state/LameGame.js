@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import LameGameHeader from './components/LameGameHeader';
 class LameGame extends Component {
     constructor(props) {
         super(props);
@@ -30,17 +30,16 @@ class LameGame extends Component {
                 break;
         
             case 1: // clicked now
-                let now = new Date().getTime();
-                let startTime = this.state.timeStamp;
+                let now = new Date().getTime(); // get current timestamp
+                let startTime = this.state.timeStamp; // retrieve start timestamp
 
-                let diff = (now - (startTime + aim * 1000))/1000;
+                let diff = (now - (startTime + aim * 1000))/1000; // do the math to see how close they were to the aim
                 this.difference = diff.toFixed(1);
 
                 this.setState({ gameStateIndex: curIndex + 1 });
                 break;
         
             case 2: // clicked "try again"
-                
                 this.setState({ gameStateIndex: 0,
                                 timeStamp: null });
                 break;
@@ -51,15 +50,21 @@ class LameGame extends Component {
 
     render() {
         const { aim } = this.props;
-
         let buttonCaption = this.buttonCaptions[this.state.gameStateIndex];
-        return (<>
-            <h2>Click Start to Play!</h2>
-            
-            <h2>{ aim } seconds</h2>
-            
-            <h2>You were { this.difference } seconds off</h2>
-            <button onClick={this.handleClick}>{ buttonCaption }</button>
+
+        return (
+            <>
+            <h1>Lame Game</h1>
+            <LameGameHeader 
+                gameStateIndex={ this.state.gameStateIndex } 
+                aim={ aim } 
+                diff={ this.difference } 
+            />
+            <button 
+                onClick={this.handleClick}
+            >
+                { buttonCaption }
+            </button>
             </>
         )
     }

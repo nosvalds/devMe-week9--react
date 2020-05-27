@@ -20,9 +20,14 @@ class CatchMeIfYouCan extends Component {
     }
 
     render() {
-        return (<button onClick={ this.handleClick } style={{
-            transform: `translateY(${this.state.position}px)`
-        }}>Catch Me</button>)
+        return (
+            <button 
+                onClick={ this.handleClick }
+                style={{
+                    transform: `translateY(${this.state.position}px)`
+                }}
+            >Catch Me
+            </button>)
     }
 }
 export default CatchMeIfYouCan;

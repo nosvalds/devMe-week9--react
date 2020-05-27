@@ -28,10 +28,18 @@ class RollCall extends Component {
     render() {
         const { names } = this.props;
 
-        return (<>
-                <p>{ names[this.state.nameIndex] }</p>
-                <button onClick={ this.handleClick }>Next</button>
-                </>)
+        return (
+            <>
+            <p>
+                { names[this.state.nameIndex] }
+            </p>
+            <button 
+                onClick={ this.handleClick }
+            >
+                Next
+            </button>
+            </>
+        );  
     }
 }
 

@@ -30,11 +30,14 @@ class Colours extends Component {
         let colour = colours[this.state.colourIndex];
         
         return (
-            <div onClick={ this.handleClick } style={{
-                width: "200px",
-                height: "200px",
-                backgroundColor: colour // return up to date color
-                }}>
+            <div 
+                onClick={ this.handleClick }
+                style={{
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: colour // return up to date color
+                }}
+            >
             </div>
         )
     }
