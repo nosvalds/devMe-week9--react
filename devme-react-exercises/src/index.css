@@ -25,3 +25,11 @@ button {
   color: white;
   border: none;
 }
+
+a {
+  padding: 1rem;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
