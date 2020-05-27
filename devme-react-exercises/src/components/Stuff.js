@@ -36,20 +36,65 @@ const Stuff = ({ square }) => {
 
   return (
     <React.Fragment>
-        <Header>Hello, world</Header>
-        <Paragraph>Lorem Ipsum dolor etc. etc.</Paragraph>
-        { square ? <Square color="hotpink" /> : null}
-        <People names={ names } />
-        <Basket items={ items } />
+        <Header>
+          Hello, world
+        </Header>
+
+        <Paragraph>
+          Lorem Ipsum dolor etc. etc.
+        </Paragraph>
+
+        { square ? 
+          <Square 
+            color="hotpink" 
+          /> 
+        : null}
+
+        <People 
+          names={ names } 
+        />
+
+        <Basket 
+          items={ items } 
+        />
+
         <Clicked />
-        <ToggleText initial="Hello" alternate="World" />
-        <Counter initial={ 50 } max={ 100 }/>
-        <StepCounter max={ 100 } step={ 5 } />
-        <CatchMeIfYouCan jump={ 5 } />
-        <RollCall names={ names } />
-        <Colours colours={ colours } />
-        <Die sides={ 6 }/>
-        <LameGame aim={ x } />
+
+        <ToggleText 
+          initial="Hello" 
+          alternate="World"
+        />
+
+        <Counter 
+          initial={ 50 } 
+          max={ 100 }
+        />
+
+        <StepCounter 
+          max={ 100 } 
+          step={ 5 } 
+        />
+
+        <CatchMeIfYouCan 
+          jump={ 5 } 
+        />
+
+        <RollCall 
+          names={ names } 
+        />
+
+        <Colours 
+          colours={ colours }
+        />
+        
+        <Die
+         sides={ 6 }
+        />
+
+        <LameGame 
+          aim={ x }
+        />
+        
     </React.Fragment>
   );
 }

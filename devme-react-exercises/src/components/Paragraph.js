@@ -5,7 +5,9 @@ class Paragraph extends Component {
         const { children } = this.props;
         
         return (
-            <p>{children ? children : "Hello, world"}</p>
+            <p>
+                {children ? children : "Hello, world"}
+            </p>
         );
     }
 }
