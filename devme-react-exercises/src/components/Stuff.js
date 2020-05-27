@@ -17,6 +17,7 @@ import Length from './forms/Length';
 import PasswordStrength from './forms/PasswordStrength';
 import TempConverter from './forms/TempConverter';
 import List from './forms/List';
+import Adder from './forms/Adder';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -112,6 +113,9 @@ const Stuff = ({ square }) => {
         
         <h3>04 List </h3>
         <List />
+        
+        <h3>05 Adder </h3>
+        <Adder />
 
         
     </React.Fragment>
