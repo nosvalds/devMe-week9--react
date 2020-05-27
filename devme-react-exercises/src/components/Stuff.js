@@ -14,6 +14,7 @@ import Colours from './tricksy_state/Colours';
 import Die from './tricksy_state/Die';
 import LameGame from './tricksy_state/LameGame';
 import Length from './forms/Length';
+import PasswordStrength from './forms/PasswordStrength';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -100,6 +101,9 @@ const Stuff = ({ square }) => {
 
         <h3>01 Length</h3>
         <Length />
+        
+        <h3>02 Password Strength</h3>
+        <PasswordStrength />
 
         
     </React.Fragment>
