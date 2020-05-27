@@ -5,7 +5,6 @@ class StepCounter extends Component {
         // make sure you always add this, it makes Component work
         super(props);
         // setup our state
-        // just a plain old JavaScript object
         this.state = {
             count: 0
         };
@@ -16,14 +15,14 @@ class StepCounter extends Component {
     handleClick(num) {
         const { max } = this.props;
 
-        let currentCount = this.state.count;
+        let newTotal = this.state.count + num;
 
-        if (currentCount + num > max) { // adding num to currentCount > max, set count to max
+        if (newTotal + num > max) { // adding num to newTotal > max, set count to max
             this.setState({ count: max });
-        } else if (currentCount + num < 0) { // adding num to currentCount < 0, set count to 0
+        } else if (newTotal + num < 0) { // adding num to newTotal < 0, set count to 0
             this.setState({ count: 0 });
         } else {
-            this.setState({ count: currentCount + num }); 
+            this.setState({ count: newTotal }); 
         }
     }
 

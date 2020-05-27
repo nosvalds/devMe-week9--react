@@ -6,11 +6,9 @@ class ToggleText extends Component {
         // make sure you always add this, it makes Component work
         super(props);
         // setup our state
-        // just a plain old JavaScript object
         this.state = {
-            clicked: false,
+            clicked: false
         };
-
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -19,7 +17,7 @@ class ToggleText extends Component {
     }
 
     render() {
-        const { initial, alternate } = this.props; // destructure color from props
+        const { initial, alternate } = this.props; // destructure text from props
 
         return (
             <>

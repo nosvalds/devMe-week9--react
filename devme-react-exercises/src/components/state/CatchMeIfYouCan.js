@@ -26,8 +26,10 @@ class CatchMeIfYouCan extends Component {
                 style={{
                     transform: `translateY(${this.state.position}px)`
                 }}
-            >Catch Me
-            </button>)
+            >
+                Catch Me
+            </button>
+        )
     }
 }
 export default CatchMeIfYouCan;

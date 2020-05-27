@@ -14,15 +14,16 @@ class Colours extends Component {
     }
 
     handleClick() {
-        const { colours } = this.props; // get jump size from props
-
-        let currentIndex = this.state.colourIndex;
-
-        if (currentIndex + 1 === colours.length) {
-            this.setState({ colourIndex: 0 });
-        } else {
-            this.setState({ colourIndex: currentIndex + 1 }); 
-        }
+        const { colours } = this.props; // get colours from props
+        // there is another slick way to do this with modulo/modulus 
+        this.setState({
+            colourIndex: (this.state.colourIndex + 1) % colours.length,
+        });
+        // if (currentIndex + 1 === colours.length) {
+        //     this.setState({ colourIndex: 0 });
+        // } else {
+        //     this.setState({ colourIndex: currentIndex + 1 }); 
+        // }
     }
 
     render() {

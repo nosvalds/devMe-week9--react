@@ -5,11 +5,9 @@ class Square extends Component {
         // make sure you always add this, it makes Component work
         super(props);
         // setup our state
-        // just a plain old JavaScript object
         this.state = {
-            clicked: false, // initially false (not clicked)
+            clicked: false // initially false (not clicked)
         };
-
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -21,11 +19,14 @@ class Square extends Component {
         const { color } = this.props; // destructure color from props
 
         return (
-            <div onClick={ this.handleClick } style={{
-                width: "200px",
-                height: "200px",
-                backgroundColor: this.state.clicked ? color : "green" // if state is false, green. If clicked is true set to color prop.
-                }}>
+            <div 
+                onClick={ this.handleClick } 
+                style={{
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: this.state.clicked ? color : "green" // if state is false, green. If clicked is true set to color prop.
+                }}
+            >
             </div>
         )
     }

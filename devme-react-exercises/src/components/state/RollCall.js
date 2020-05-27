@@ -14,30 +14,33 @@ class RollCall extends Component {
     }
 
     handleClick() {
-        const { names } = this.props; // get jump size from props
+        const { names } = this.props; // get names from props
 
-        let currentIndex = this.state.nameIndex;
-
-        if (currentIndex + 1 === names.length) {
-            this.setState({ nameIndex: 0 });
-        } else {
-            this.setState({ nameIndex: currentIndex + 1 }); 
-        }
+        // there is another slick way to do this with modulo/modulus 
+        this.setState({
+            nameIndex: (this.state.nameIndex + 1) % names.length,
+        });
+        // if (currentIndex + 1 === colours.length) {
+        //     this.setState({ colourIndex: 0 });
+        // } else {
+        //     this.setState({ colourIndex: currentIndex + 1 }); 
+        // }
     }
 
     render() {
         const { names } = this.props;
+        let name = names[this.state.nameIndex];
 
         return (
             <>
-            <p>
-                { names[this.state.nameIndex] }
-            </p>
-            <button 
-                onClick={ this.handleClick }
-            >
-                Next
-            </button>
+                <p>
+                    { name }
+                </p>
+                <button 
+                    onClick={ this.handleClick }
+                >
+                    Next
+                </button>
             </>
         );  
     }

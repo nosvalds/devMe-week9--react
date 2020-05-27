@@ -76,7 +76,7 @@ const Stuff = ({ square }) => {
         />
 
         <CatchMeIfYouCan 
-          jump={ 5 } 
+          jump={ 100 } 
         />
 
         <RollCall 

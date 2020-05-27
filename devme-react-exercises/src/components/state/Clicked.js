@@ -6,25 +6,28 @@ class Clicked extends Component {
         // make sure you always add this, it makes Component work
         super(props);
         // setup our state
-        // just a plain old JavaScript object
         this.state = {
-            clicked: false,
+            clicked: false
         };
-
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        this.setState({ clicked: true }); 
+        this.setState({ clicked: !this.state.clicked }); 
     }
 
     render() {
         return (
+            <>
+            <h3>
+                03 State - Clicked
+            </h3>
             <p 
                 onClick={ this.handleClick }
             >
                 { this.state.clicked ? "Clicked" : "Not clicked" }
             </p>
+            </>
         );
     }
 }
