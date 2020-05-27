@@ -19,6 +19,7 @@ import TempConverter from './forms/TempConverter';
 import List from './forms/List';
 import Adder from './forms/Adder';
 import TransformParent from './forms/TransformParent';
+import Forms from './forms/Forms';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -120,7 +121,15 @@ const Stuff = ({ square }) => {
         
         <h3>06 Transform </h3>
         <TransformParent />
+        
+        <h3>01 Tricksy Form </h3>
+        <Forms 
+          fields={
+                    ["First Name", "Last Name", "Emails"]
+                  } 
+        />
 
+        
         
     </React.Fragment>
   );
