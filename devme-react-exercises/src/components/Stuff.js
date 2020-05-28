@@ -21,6 +21,7 @@ import Adder from './forms/Adder';
 import TransformParent from './forms/TransformParent';
 import Forms from './forms/Forms';
 import Progress from '../prebuiltcomponents/Progress';
+import CatchMeIfYouCan2 from '../prebuiltcomponents/CatchMeIfYouCan';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -134,6 +135,9 @@ const Stuff = ({ square }) => {
 
         <h3>01 Progress</h3>
         <Progress />
+
+        <h3>02 Catch Me 2 Electric Boogaloo</h3>
+        <CatchMeIfYouCan2 jump={ 100 }/>
         
         
     </React.Fragment>
