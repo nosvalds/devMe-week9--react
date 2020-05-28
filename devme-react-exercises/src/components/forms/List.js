@@ -13,7 +13,8 @@ class List extends Component {
     }
 
     clickHandler() {
-        this.setState({ listItems: [...this.state.listItems, this.state.inputValue], // use spread operator to concatenate inputValue onto listItems array. Can't use concat because we shouldn't modify state that way.
+        const { listItems, inputValue } = this.state;
+        this.setState({ listItems: [...listItems, inputValue], // use spread operator to concatenate inputValue onto listItems array. Can't use concat/push directly because we shouldn't modify state that way.
                         inputValue: "" // clear input for user experience
                     });
     }
@@ -35,12 +36,12 @@ class List extends Component {
                 <label>Add to the list:</label>
                 <input
                     type="text"
-                    onChange={(e) => this.handleChange(e)}
+                    onChange={ this.handleChange }
                     value={ inputValue }
                 >
                 </input>
                 <button 
-                    onClick={this.clickHandler}
+                    onClick={ this.clickHandler }
                 >
                     Add
                 </button>

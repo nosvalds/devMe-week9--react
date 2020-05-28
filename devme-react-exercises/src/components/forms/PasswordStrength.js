@@ -37,7 +37,7 @@ class PasswordStrength extends Component {
                 <label>Check your password strength:</label>
                 <input 
                     type="password" 
-                    onChange={(e) => this.handleChange(e)}
+                    onChange={ this.handleChange }
                     value={ this.state.input }
                 >
                 </input>

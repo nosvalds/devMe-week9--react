@@ -37,7 +37,7 @@ class TempConverter extends Component {
                     <label>°C</label>
                     <input 
                         type="number" 
-                        onChange={(e) => this.handleChangeC(e)}
+                        onChange={ this.handleChangeC }
                         value={ tempC }
                     >
                     </input>
@@ -46,7 +46,7 @@ class TempConverter extends Component {
                     <label>°F</label>
                     <input 
                         type="number"
-                        onChange={(e) => this.handleChangeF(e)}
+                        onChange={ this.handleChangeF } 
                         value={ tempF }
                     >
                     </input>
