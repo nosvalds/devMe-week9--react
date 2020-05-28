@@ -5,13 +5,14 @@ class Forms extends Component {
         super(props);
         
         this.state = {
-            submit: false,
+            submit: false, // tracks if form has been submitted
         }
 
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
+    handleClick(e) {
+        e.preventDefault();
         this.setState({
             submit: true
         })
@@ -21,7 +22,7 @@ class Forms extends Component {
         const { fields } = this.props
         const { submit } = this.state
         return (
-            <>
+            <form>
                 { fields.map((value, index) => (
                         <FormsField key={ index } label={ value } submit={ submit } />
                     )
@@ -31,7 +32,7 @@ class Forms extends Component {
                 >
                     Submit
                 </button>
-            </>
+            </form>
         )
     }
 }
