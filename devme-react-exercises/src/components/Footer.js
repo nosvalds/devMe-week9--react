@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => (
     <footer>
         <Link to="/">Home</Link>
+        <Link to="/all-stuff">Everything</Link>
         <Link to="/clicked">Clicked</Link>
         <Link to="/length">Length</Link>
         <Link to="/adder">Adder</Link>

@@ -12,6 +12,8 @@ import Forms from './components/forms/Forms';
 import Footer from './components/Footer';
 import FourOhFour from './components/FourOhFour';
 import Square from './components/Square';
+import StepCounter from './components/state/StepCounter';
+import Stuff from './components/Stuff';
 
 const App = () => (
     <Router>
@@ -20,6 +22,7 @@ const App = () => (
             <Route exact path="/">
                 <h2>Welcome Home, select a link from the footer to see some sweet React mini-apps</h2>
             </Route>
+            <Route exact path="/all-stuff" component={Stuff} />
             <Route exact path="/clicked" component={Clicked} />
             <Route exact path="/length" component={Length} />
             <Route exact path="/adder" component={Adder} />
@@ -43,6 +46,12 @@ const App = () => (
             </Route>
             <Route path="/squares/:colour" render={ ({ match }) => (
                 <Square color={ match.params.colour } />
+            )}/>
+            <Route path="/steps/:max/:step" render={ ({ match }) => (
+                <StepCounter 
+                    max={ +match.params.max }
+                    step={ +match.params.step }
+                />
             )}/>
             <Route component={FourOhFour}/>
         </Switch>
