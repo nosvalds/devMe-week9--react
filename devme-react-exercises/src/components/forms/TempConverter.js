@@ -33,20 +33,24 @@ class TempConverter extends Component {
         const { tempC, tempF } = this.state;
         return (
             <>
-                <label>°C</label>
-                <input 
-                    type="text" 
-                    onChange={(e) => this.handleChangeC(e)}
-                    value={ tempC }
-                >
-                </input>
-                <label>°F</label>
-                <input 
-                    type="text"
-                    onChange={(e) => this.handleChangeF(e)}
-                    value={ tempF }
-                >
-                </input>
+                <div>
+                    <label>°C</label>
+                    <input 
+                        type="number" 
+                        onChange={(e) => this.handleChangeC(e)}
+                        value={ tempC }
+                    >
+                    </input>
+                </div>
+                <div>
+                    <label>°F</label>
+                    <input 
+                        type="number"
+                        onChange={(e) => this.handleChangeF(e)}
+                        value={ tempF }
+                    >
+                    </input>
+                </div>
             </>
         )
     }
