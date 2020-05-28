@@ -4,35 +4,33 @@ class Transform extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: "",
-            result: "Start Typing...",
+            input: 0,
         }
 
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(e) {
-        const { transform } = this.props;
-        let curInput = +e.currentTarget.value;
         this.setState({ 
-            input: curInput,
-            result: transform(curInput)
+            input: +e.currentTarget.value,
         });
     }
 
     render() {
-        const { result, input } = this.state
+        const { input } = this.state
+        const { transform } = this.props;
+
         return (
             <>
                 <label>
                     Input:
+                    <input 
+                        type="number"
+                        value={ input }
+                        onChange={ this.handleChange }
+                    />
                 </label>
-                <input 
-                    type="number"
-                    value={ input }
-                    onChange={ this.handleChange }
-                />
-                <p>Result: { result }</p>
+                <p>Result: { transform(input) }</p>
             </>
         )
     }
