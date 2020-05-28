@@ -4,7 +4,9 @@ class PasswordStrength extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { input: "" };
+        this.state = { 
+            input: ""
+        };
 
         this.handleChange = this.handleChange.bind(this);
     }
@@ -20,7 +22,7 @@ class PasswordStrength extends Component {
 
         if (pwLength > 0 && pwLength < 9) {
             color = "red";
-        } else if (pwLength > 0 && pwLength < 16) {
+        } else if (pwLength >= 9 && pwLength < 16) {
             color = "orange";
         } else if (pwLength >= 16) {
             color = "green"
