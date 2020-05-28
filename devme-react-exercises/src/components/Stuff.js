@@ -20,6 +20,7 @@ import List from './forms/List';
 import Adder from './forms/Adder';
 import TransformParent from './forms/TransformParent';
 import Forms from './forms/Forms';
+import Progress from '../prebuiltcomponents/Progress';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -129,6 +130,10 @@ const Stuff = ({ square }) => {
                   } 
         />
 
+        <h2>Prebuilt Component Exercises</h2>
+
+        <h3>01 Progress</h3>
+        <Progress />
         
         
     </React.Fragment>
