@@ -14,14 +14,13 @@ import FourOhFour from './components/FourOhFour';
 import Square from './components/Square';
 import StepCounter from './components/state/StepCounter';
 import Stuff from './components/Stuff';
+import Home from './prebuiltcomponents/Home';
 
 const App = () => (
     <Router>
         <Header>Welcome to my App</Header>
         <Switch>
-            <Route exact path="/">
-                <h2>Welcome Home, select a link from the footer to see some sweet React mini-apps</h2>
-            </Route>
+            <Route exact path="/" component={ Home }/>
             <Route exact path="/all-stuff" component={Stuff} />
             <Route exact path="/clicked" component={Clicked} />
             <Route exact path="/length" component={Length} />
