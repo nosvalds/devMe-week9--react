@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card'
 
 class CountBy extends Component {
 
@@ -20,24 +20,14 @@ class CountBy extends Component {
     render() {
         const { clicked } = this.state;
         return (
-            // <Card className="text-center" style={{ width: '18rem' }}>
-            //     <Card.Body>
-            //         <Card.Title>Quiz 02 - EvenClicks</Card.Title>
-            //         <Card.Text onClick={ this.handleClick }>
-            //             { display }
-            //         </Card.Text>
-            //     </Card.Body>
-            // </Card>
-            <>
-                <h3>
-                    Quiz 03 - Count By
-                </h3>
-                <p 
-                    onClick={ this.handleClick }
-                >
-                    { clicked }
-                </p>
-            </>
+            <Card className="text-center" style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>Quiz 03 - Count By</Card.Title>
+                    <Card.Text onClick={ this.handleClick }>
+                        { clicked }
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         );
     }
 }
