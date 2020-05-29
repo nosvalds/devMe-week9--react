@@ -10,7 +10,11 @@ function App() {
   return (
     <div className="mx-auto" style={{width: 400}}>
       <Router>
-        <CountBy step={ 5 } />
+        <Route path="/count-by/:step" render={ ({ match }) => (
+                <CountBy 
+                    step={ +match.params.step }
+                />
+        )}/>
         <Route path="/even-clicks" component={ EvenClicks } />
         <Route path="/multiplier/:x/:y" render={ ({ match }) => (
                 <Multiplier 
@@ -18,8 +22,6 @@ function App() {
                     y={ +match.params.y }
                 />
         )}/>
-        {/* <Multiplier x={ 5 } y={ 7 } /> Pre-router solution */}
-        
       </Router>
     </div>
   );
