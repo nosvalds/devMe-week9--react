@@ -5,16 +5,16 @@ const Multiplier = ({ x, y }) => {
     return (
         <Card className="text-center" style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>Quiz 01</Card.Title>
+                <Card.Title>Quiz 01 - Multiplier</Card.Title>
                 <Card.Text>
-                    <p>{ x } * { y } = { x * y }</p>
+                    { x } * { y } = { x * y }
                 </Card.Text>
             </Card.Body>
         </Card>
-        // <Card>
-        //     <h2>Quiz 01</h2>
+        // 
+        //     <h2>Quiz 01 - Multiplier</h2>
         //     <p>{ x * y }</p>
-        // </Card>
+        // 
     );
 }
 
