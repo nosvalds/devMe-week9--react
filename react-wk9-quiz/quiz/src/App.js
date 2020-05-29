@@ -11,7 +11,10 @@ function App() {
   return (
     <div className="mx-auto" style={{width: 400}}>
       <Router>
-        <HideMe>Blah blah blah blah</HideMe>
+        <Route path="/hide-me">
+          <HideMe>Blah blah blah blah</HideMe>
+        </Route>
+
         <Route path="/count-by/:step" render={ ({ match }) => (
                 <CountBy 
                     step={ +match.params.step }
