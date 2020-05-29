@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card'
 
 class EvenClicks extends Component {
 
@@ -20,17 +21,15 @@ class EvenClicks extends Component {
         const { clicked } = this.state;
         const { children } = this.props;
         return (
-            <>
-                <h3>
-                    Quiz 04 - Hide Me
-                </h3>
-                { clicked ? null : // if clicked = true hide, else show children from props
-                <p 
-                    onClick={ this.handleClick }
-                >
-                    { children }
-                </p>}
-            </>
+            <Card className="text-center" style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>Quiz 04 - Hide Me</Card.Title>
+                    { clicked ? null : // if clicked = true hide, else show children from props
+                    <Card.Text onClick={ this.handleClick }>
+                        { children }
+                    </Card.Text>}
+                </Card.Body>
+             </Card>
         );
     }
 }
