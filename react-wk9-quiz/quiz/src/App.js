@@ -8,7 +8,14 @@ function App() {
   return (
     <div className="container-md">
       <Router>
-        <Multiplier x={ 5 } y={ 7 } />
+        <Route path="/multiplier/:x/:y" render={ ({ match }) => (
+                <Multiplier 
+                    x={ +match.params.x }
+                    y={ +match.params.y }
+                />
+        )}/>
+        {/* <Multiplier x={ 5 } y={ 7 } /> Pre-router solution */}
+        
       </Router>
     </div>
   );
