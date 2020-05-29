@@ -26,6 +26,7 @@ import PasswordStrength2 from '../prebuiltcomponents/PasswordStrength2';
 import List2 from '../prebuiltcomponents/List2';
 import TempConverter2 from '../prebuiltcomponents/TempConverter2';
 import Dates from '../prebuiltcomponents/Dates';
+import ImageCarousel from '../prebuiltcomponents/ImageCarousel';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -154,6 +155,9 @@ const Stuff = ({ square }) => {
 
         <h3>06 Dates</h3>
         <Dates />
+
+        <h3>07 Image Carousel</h3>
+        <ImageCarousel />
         
         
     </React.Fragment>
