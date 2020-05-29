@@ -5,11 +5,13 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Multiplier from './components/Multiplier';
 import EvenClicks from './components/EvenClicks';
 import CountBy from './components/CountBy';
+import HideMe from './components/HideMe';
 
 function App() {
   return (
     <div className="mx-auto" style={{width: 400}}>
       <Router>
+        <HideMe>Blah blah blah blah</HideMe>
         <Route path="/count-by/:step" render={ ({ match }) => (
                 <CountBy 
                     step={ +match.params.step }
