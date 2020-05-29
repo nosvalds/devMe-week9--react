@@ -23,6 +23,7 @@ import Forms from './forms/Forms';
 import Progress from '../prebuiltcomponents/Progress';
 import CatchMeIfYouCan2 from '../prebuiltcomponents/CatchMeIfYouCan';
 import PasswordStrength2 from '../prebuiltcomponents/PasswordStrength2';
+import List2 from '../prebuiltcomponents/List2';
 
 const Stuff = ({ square }) => {
     let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
@@ -139,10 +140,12 @@ const Stuff = ({ square }) => {
 
         <h3>02 Catch Me 2 - Electric Boogaloo</h3>
         <CatchMeIfYouCan2 jump={ 100 }/>
-        
 
         <h3>03 Password Check 2 - Electric Boogaloo</h3>
         <PasswordStrength2 />
+
+        <h3>04 List 2 - Electric Boogaloo</h3>
+        <List2 />
         
         
     </React.Fragment>
