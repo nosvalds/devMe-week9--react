@@ -7,9 +7,9 @@ import EvenClicks from './components/EvenClicks';
 
 function App() {
   return (
-    <div className="container-md">
+    <div className="mx-auto" style={{width: 400}}>
       <Router>
-        <EvenClicks />
+        <Route path="/even-clicks" component={ EvenClicks } />
         <Route path="/multiplier/:x/:y" render={ ({ match }) => (
                 <Multiplier 
                     x={ +match.params.x }

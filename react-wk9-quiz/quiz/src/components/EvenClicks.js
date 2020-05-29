@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card'
 
 class EvenClicks extends Component {
 
@@ -25,16 +26,24 @@ class EvenClicks extends Component {
             display = clicked % 2 === 0 ? "Even" : "Odd"; // swap between even and odd
         }
         return (
-            <>
-                <h3>
-                    Quiz 02 - EvenClicks
-                </h3>
-                <p 
-                    onClick={ this.handleClick }
-                >
-                    { display }
-                </p>
-            </>
+            <Card className="text-center" style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>Quiz 02 - EvenClicks</Card.Title>
+                    <Card.Text onClick={ this.handleClick }>
+                        { display }
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+            // <>
+            //     <h3>
+            //         Quiz 02 - EvenClicks
+            //     </h3>
+            //     <p 
+            //         onClick={ this.handleClick }
+            //     >
+            //         { display }
+            //     </p>
+            // </>
         );
     }
 }
